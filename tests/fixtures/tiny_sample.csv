@@ -1,0 +1,8 @@
+timestamp,endpoint,method,status_code,response_time_ms
+2026-11-07T10:00:00Z,/catalog,GET,200,50.0
+2026-11-07T10:05:00Z,/catalog,GET,404,100.0
+2026-11-07T10:30:00Z,/checkout,POST,200,200.0
+2026-11-07T10:45:00Z,/catalog,GET,200,60.0
+2026-11-07T11:00:00Z,/checkout,POST,500,400.0
+2026-11-07T11:15:00Z,/login,POST,200,150.0
+2026-11-07T11:30:00Z,/login,POST,401,250.0

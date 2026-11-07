@@ -217,22 +217,23 @@ def create_pdf_and_verify():
             print_background=True,
         )
         print(f"Generated PDF: {PDF_PATH}")
-
-        # Render preview image of the page to inspect visually
-        page.screenshot(path=PREVIEW_IMG_PATH, full_page=True)
-        print(f"Rendered Preview Screenshot: {PREVIEW_IMG_PATH}")
-
         browser.close()
 
-    # Verify PDF page count
-    with open(PDF_PATH, "rb") as f:
-        pdf_bytes = f.read()
-
-    # Match /Type /Page (excluding /Pages)
-    page_matches = re.findall(rb"/Type\s*/Page\b", pdf_bytes)
-    page_count = len(page_matches)
-    print(f"Verified PDF Page Count: {page_count} page(s)")
+    # 1. Verify PDF page count with pypdf parser
+    import pypdf
+    reader = pypdf.PdfReader(PDF_PATH)
+    page_count = len(reader.pages)
+    print(f"pypdf parser verified page count: {page_count} page(s)")
     assert page_count == 1, f"Expected 1 page, but PDF has {page_count} pages!"
+
+    # 2. Render actual compiled PDF to image using pypdfium2
+    import pypdfium2 as pdfium
+    pdf = pdfium.PdfDocument(PDF_PATH)
+    pdf_page = pdf[0]
+    bitmap = pdf_page.render(scale=2.0)
+    pil_image = bitmap.to_pil()
+    pil_image.save(PREVIEW_IMG_PATH)
+    print(f"Rendered actual PDF to Preview Screenshot: {PREVIEW_IMG_PATH} (size: {pil_image.size})")
 
 
 if __name__ == "__main__":

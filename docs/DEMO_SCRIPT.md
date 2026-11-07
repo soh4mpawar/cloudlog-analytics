@@ -6,6 +6,8 @@ This demonstration script is designed for a **10-minute university presentation 
 
 ## Team Role Allocation Matrix
 
+**Team Members**: Mohd Uzair Quresh (`220905158`) [Student A / 1] & Soham Pawar (`230905312`) [Student B / 2].
+
 | Demo Segment | Time | 2-Student Team | 3-Student Team | Focus Area |
 | :--- | :--- | :--- | :--- | :--- |
 | **1. Introduction & Context** | 0:00 – 1:30 | **Student A** | **Student 1** | Problem statement, cloud context, architecture |

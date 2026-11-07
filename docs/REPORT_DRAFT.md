@@ -4,9 +4,8 @@
 ---
 
 ### Student Name(s)
-- Student 1: `[Student Name 1 — Roll Number / ID]`
-- Student 2: `[Student Name 2 — Roll Number / ID]`
-- Student 3: `[Student Name 3 — Roll Number / ID]` *(Optional)*
+- Mohd Uzair Quresh (Reg. No. 220905158)
+- Soham Pawar (Reg. No. 230905312)
 
 ---
 

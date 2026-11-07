@@ -66,7 +66,7 @@ def create_docx():
 
     # 2. Student Name(s)
     add_h("Student Name(s)")
-    add_p("Student 1: [Student Name 1 — Roll Number / ID] | Student 2: [Student Name 2 — Roll Number / ID] | Student 3: [Student Name 3 — Roll Number / ID] (Optional)", space_before=0, space_after=2)
+    add_p("Mohd Uzair Quresh (220905158)  |  Soham Pawar (230905312)", space_before=0, space_after=2)
 
     # 3. Objective
     add_h("Objective")
@@ -170,7 +170,7 @@ def create_pdf_and_verify():
 <p><b>CloudLog Analytics: Cloud-Based Web Log Analysis Using MapReduce</b></p>
 
 <h2>2. Student Name(s)</h2>
-<p class="names">Student 1: [Student Name 1 — Roll Number / ID] &nbsp;|&nbsp; Student 2: [Student Name 2 — Roll Number / ID] &nbsp;|&nbsp; Student 3: [Student Name 3 — Roll Number / ID] (Optional)</p>
+<p class="names">Mohd Uzair Quresh (220905158) &nbsp;&nbsp;|&nbsp;&nbsp; Soham Pawar (230905312)</p>
 
 <h2>3. Objective</h2>
 <p>To implement an educational web log analytics platform applying the MapReduce paradigm to HTTP access logs, evaluate serial versus two-process execution performance on a single host, and prepare the application for managed hosting on Streamlit Community Cloud.</p>
